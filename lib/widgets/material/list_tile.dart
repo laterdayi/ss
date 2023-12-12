@@ -1,0 +1,43 @@
+part of '../index.dart';
+
+class CustomListTile extends ListTile {
+  CustomListTile({
+    super.key,
+    super.leading,
+    super.title,
+    super.subtitle,
+    super.trailing,
+    super.isThreeLine,
+    super.dense,
+    super.visualDensity,
+    super.shape,
+    super.style,
+    super.selectedColor,
+    super.iconColor,
+    super.textColor,
+    super.titleTextStyle,
+    super.subtitleTextStyle,
+    super.leadingAndTrailingTextStyle,
+    super.enabled,
+    super.onTap,
+    super.onLongPress,
+    super.onFocusChange,
+    super.mouseCursor,
+    super.selected,
+    super.focusColor,
+    super.hoverColor,
+    super.splashColor,
+    super.focusNode,
+    super.autofocus,
+    super.tileColor,
+    super.selectedTileColor,
+    super.enableFeedback,
+    super.horizontalTitleGap,
+    super.minVerticalPadding,
+    super.minLeadingWidth,
+    super.titleAlignment,
+    EdgeInsetsGeometry? contentPadding,
+  }) : super(
+          contentPadding: contentPadding ?? EdgeInsets.symmetric(horizontal: AppTheme.padding),
+        );
+}

@@ -1,0 +1,57 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    // 允许访问互联网
+    <uses-permission android:name="android.permission.INTERNET"/>
+    // 允许应用请求安装其他应用 
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    // 允许设备震动
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    // 允许应用程序接收设备启动完成的广播
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    // 允许应用程序更新应用图标角标
+    <uses-permission android:name="com.android.launcher.permission.UPDATE_BADGE"/>
+    // 允许应用程序在运行时向用户询问是否允许发送通知
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    // 允许使用全屏意图，让应用程序在锁屏状态下显示一个全屏的活动
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    // 允许应用程序创建浮动窗口并显示在其他应用程序的顶顶部
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    // 允许唤醒设备屏幕
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    // 允许应用访问和修改设备上的文件
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <application
+        android:label="AMS"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true"
+    >
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize"
+            android:turnScreenOn="true"
+        >
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+</manifest>
